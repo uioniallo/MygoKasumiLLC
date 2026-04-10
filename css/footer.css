@@ -1,0 +1,386 @@
+/* ===== Mygo Kasumi LLC 高级响应式尾脚样式 ===== */
+
+/* ===== CSS 变量定义 ===== */
+:root {
+  --footer-bg: #001F3F;
+  --footer-text: #E0E0E0;
+  --footer-text-secondary: #B0B0B0;
+  --footer-text-tertiary: #888;
+  --footer-border: rgba(224, 224, 224, 0.15);
+  --footer-border-light: rgba(224, 224, 224, 0.1);
+  --footer-white: #fff;
+  --transition: all 0.3s ease;
+}
+
+/* ===== 尾脚主容器 ===== */
+.footer {
+  background: var(--footer-bg);
+  color: var(--footer-text);
+  padding: 80px 24px 0;
+  margin-top: 80px;
+}
+
+.footer-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* ===== 主体功能区 ===== */
+.footer-main {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 60px;
+  margin-bottom: 60px;
+  padding-bottom: 60px;
+  border-bottom: 1px solid var(--footer-border);
+}
+
+/* ===== 第一列：品牌灵魂 ===== */
+.footer-brand {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.footer-brand-name {
+  font-size: 24px;
+  font-weight: 600;
+  color: var(--footer-white);
+  letter-spacing: 0.5px;
+  line-height: 1.2;
+}
+
+.footer-brand-slogan {
+  font-size: 16px;
+  color: var(--footer-text-secondary);
+  letter-spacing: 2px;
+  font-weight: 400;
+  line-height: 1.8;
+  font-style: italic;
+}
+
+/* ===== 第二列：导航链接 ===== */
+.footer-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.footer-nav-title {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--footer-white);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.footer-nav-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  list-style: none;
+}
+
+.footer-nav-list li a {
+  font-size: 14px;
+  color: var(--footer-text-secondary);
+  transition: var(--transition);
+  position: relative;
+  padding-bottom: 2px;
+  display: inline-block;
+}
+
+.footer-nav-list li a:hover {
+  color: var(--footer-white);
+  padding-left: 4px;
+}
+
+/* ===== 第三列：联系中心 ===== */
+.footer-contact {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.footer-contact-title {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--footer-white);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.footer-contact-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  list-style: none;
+}
+
+.footer-contact-item {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.footer-contact-item a {
+  font-size: 14px;
+  color: var(--footer-text);
+  transition: var(--transition);
+}
+
+.footer-contact-item a:hover {
+  color: var(--footer-white);
+}
+
+.footer-contact-caption {
+  font-size: 11px;
+  color: rgba(224, 224, 224, 0.5);
+  font-weight: 400;
+  letter-spacing: 0.5px;
+}
+
+/* ===== 底部免责声明区 ===== */
+.footer-disclaimer-section {
+  padding-bottom: 40px;
+  border-top: 1px solid var(--footer-border);
+  padding-top: 40px;
+}
+
+.footer-disclaimer-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 40px;
+  margin-bottom: 32px;
+}
+
+.footer-disclaimer-item {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding-right: 20px;
+  border-right: 1px solid var(--footer-border-light);
+}
+
+.footer-disclaimer-item:last-child {
+  border-right: none;
+  padding-right: 0;
+}
+
+.footer-disclaimer-lang {
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--footer-text-tertiary);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.footer-disclaimer-text {
+  font-size: 12px;
+  color: var(--footer-text-tertiary);
+  line-height: 1.7;
+  text-align: justify;
+}
+
+/* ===== 底部版权区 ===== */
+.footer-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 24px 0;
+  border-top: 1px solid var(--footer-border-light);
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.footer-copyright {
+  font-size: 12px;
+  color: var(--footer-text-tertiary);
+}
+
+.footer-bottom-links {
+  display: flex;
+  gap: 24px;
+  list-style: none;
+}
+
+.footer-bottom-links a {
+  font-size: 12px;
+  color: var(--footer-text-tertiary);
+  transition: var(--transition);
+}
+
+.footer-bottom-links a:hover {
+  color: var(--footer-text);
+}
+
+/* ===== 响应式设计：平板设备 (1024px 及以下) ===== */
+@media (max-width: 1024px) {
+  .footer-main {
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+  }
+
+  .footer-disclaimer-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+  }
+
+  .footer-disclaimer-item {
+    border-right: none;
+    border-bottom: 1px solid var(--footer-border-light);
+    padding-right: 0;
+    padding-bottom: 32px;
+  }
+
+  .footer-disclaimer-item:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+  }
+}
+
+/* ===== 响应式设计：平板竖屏 (768px 及以下) ===== */
+@media (max-width: 768px) {
+  .footer {
+    padding: 60px 24px 0;
+  }
+
+  .footer-main {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    margin-bottom: 40px;
+    padding-bottom: 40px;
+  }
+
+  .footer-brand {
+    text-align: center;
+    align-items: center;
+  }
+
+  .footer-brand-name {
+    font-size: 22px;
+  }
+
+  .footer-brand-slogan {
+    letter-spacing: 1.5px;
+    font-size: 15px;
+  }
+
+  .footer-nav,
+  .footer-contact {
+    text-align: center;
+    align-items: center;
+  }
+
+  .footer-nav-list,
+  .footer-contact-list {
+    align-items: center;
+  }
+
+  .footer-nav-list li a:hover {
+    padding-left: 0;
+  }
+
+  .footer-disclaimer-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .footer-disclaimer-item {
+    border-right: none;
+    border-bottom: 1px solid var(--footer-border-light);
+    padding-right: 0;
+    padding-bottom: 24px;
+    text-align: center;
+  }
+
+  .footer-disclaimer-item:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+  }
+
+  .footer-disclaimer-text {
+    text-align: center;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footer-bottom-links {
+    justify-content: center;
+  }
+}
+
+/* ===== 响应式设计：手机设备 (480px 及以下) ===== */
+@media (max-width: 480px) {
+  .footer {
+    padding: 40px 16px 0;
+  }
+
+  .footer-main {
+    gap: 32px;
+    margin-bottom: 32px;
+    padding-bottom: 32px;
+  }
+
+  .footer-brand-name {
+    font-size: 20px;
+  }
+
+  .footer-brand-slogan {
+    font-size: 14px;
+    letter-spacing: 1px;
+  }
+
+  .footer-nav-title,
+  .footer-contact-title {
+    font-size: 13px;
+  }
+
+  .footer-nav-list li a,
+  .footer-contact-item a {
+    font-size: 13px;
+  }
+
+  .footer-disclaimer-text {
+    font-size: 11px;
+    line-height: 1.6;
+  }
+
+  .footer-copyright,
+  .footer-bottom-links a {
+    font-size: 11px;
+  }
+
+  .footer-bottom {
+    padding: 16px 0;
+    gap: 12px;
+  }
+
+  .footer-disclaimer-lang {
+    font-size: 10px;
+  }
+}
+
+/* ===== 辅助类 ===== */
+.footer a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.footer nav {
+  display: block;
+}
+
+.footer nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.footer nav ul li {
+  margin: 0;
+  padding: 0;
+}
